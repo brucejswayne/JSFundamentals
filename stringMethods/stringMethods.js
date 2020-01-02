@@ -96,9 +96,10 @@ function stringMethods() {
     const strr = 'I am learning am JavaScript!';
     const str2 = ' and React';
     const str3 = '!';
-    const trim = '   Js   ';
+    const trim = '\tJs\t';
     const reg = /learn/;
     const regExp = new RegExp(/Java/g);
+    const strObj = new String('primitive value');
     console.log(typeof regExp)
     const strLength = str.length;
     console.log(strLength);
@@ -125,7 +126,10 @@ function stringMethods() {
     console.log(str + str2 + str3 + '!!');
     console.log(str.toLowerCase());
     console.log(str.toUpperCase());
-    console.log(trim.trim());
+    console.log(trim);
+    console.log(str + trim.trim() + str);
+    console.log(str + trim.trimStart() + str);
+    console.log(str + trim.trimEnd() + str);
     console.log(str.match('am'));
     console.log(str.match(/am/));
     console.log(str.match(/am/g));
@@ -159,6 +163,7 @@ function stringMethods() {
     console.log(str.includes('I am', 0));
     console.log(str.includes('I am', 1));
     console.log(str.replace('I am', 'We are'))
+    console.log(strObj.valueOf())
 }
 
 stringMethods();
